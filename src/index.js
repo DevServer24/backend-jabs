@@ -14,7 +14,7 @@ Server.use(express.json());
 
 // Middleware to serve static files from a directory (e.g., public)
 const __dirname = path.resolve();
-Server.use(express.static(path.join(__dirname, 'public')));
+Server.use(express.cstatic(path.join(__dirname, 'public')));
 
 // Route for sign-up
 Server.post('/sign-up', SignUpController);
